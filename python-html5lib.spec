@@ -28,8 +28,6 @@ python setup.py install \
 	--root=$RPM_BUILD_ROOT \
 	--optimize=2
 
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_examplesdir}/%{name}-%{version}}
-
 %py_postclean $RPM_BUILD_ROOT%{py_sitescriptdir}
 
 %clean
