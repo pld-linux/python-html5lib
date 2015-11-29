@@ -11,7 +11,7 @@ Source0:	http://html5lib.googlecode.com/files/%{module}-%{version}.zip
 URL:		http://code.google.com/p/html5lib/
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	unzip
 %pyrequires_eq	python-libs
 BuildArch:	noarch
