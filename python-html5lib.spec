@@ -1,3 +1,5 @@
+# TODO:
+#  - versions past 0.9999999 break chrome build and dependant libs (API change)
 #
 # Conditional build:
 %bcond_without	python2	# CPython 2.x module
@@ -9,7 +11,7 @@ Summary:	HTML parser/tokenizer based on the WHATWG HTML5 specification
 Summary(pl.UTF-8):	Analizator i tokenizer HTML-a oparty na specyfikacji WHATWG HTML5
 Name:		python-%{module}
 Version:	0.999999999
-Release:	1
+Release:	0.1
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://github.com/html5lib/html5lib-python/releases
