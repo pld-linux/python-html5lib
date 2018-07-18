@@ -8,16 +8,16 @@
 Summary:	HTML parser/tokenizer based on the WHATWG HTML5 specification
 Summary(pl.UTF-8):	Analizator i tokenizer HTML-a oparty na specyfikacji WHATWG HTML5
 Name:		python-%{module}
-Version:	0.999999999
-Release:	3
+Version:	1.0.1
+Release:	1
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://github.com/html5lib/html5lib-python/releases
 Source0:	https://github.com/html5lib/html5lib-python/archive/%{version}/%{module}-%{version}.tar.gz
-# Source0-md5:	a81446ef3ce3ef18f5e8e242b7072b83
+# Source0-md5:	ef1146d400657a17d396fb21da5b24b8
 URL:		https://github.com/html5lib/
 %if %{with python2}
-BuildRequires:	python-devel >= 1:2.6
+BuildRequires:	python-devel >= 1:2.7
 BuildRequires:	python-setuptools >= 18.5
 %if %{with tests}
 BuildRequires:	python-flake8
@@ -28,7 +28,7 @@ BuildRequires:	python-ordereddict
 BuildRequires:	python-pytest
 BuildRequires:	python-pytest-expect >= 1.1
 BuildRequires:	python-pytest-expect < 2.0
-BuildRequires:	python-six
+BuildRequires:	python-six >= 1.9
 BuildRequires:	python-webencodings
 %endif
 %endif
@@ -40,13 +40,13 @@ BuildRequires:	python3-flake8
 BuildRequires:	python3-pytest
 BuildRequires:	python3-pytest-expect >= 1.1
 BuildRequires:	python3-pytest-expect < 2.0
-BuildRequires:	python3-six
+BuildRequires:	python3-six >= 1.9
 BuildRequires:	python3-webencodings
 %endif
 %endif
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
-Requires:	python-modules >= 1:2.6
+Requires:	python-modules >= 1:2.7
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -74,10 +74,18 @@ Analizator i tokenizer HTML-a oparty na specyfikacji WHATWG HTML5.
 %build
 %if %{with python2}
 %py_build
+
+%if %{with tests}
+%{__python} -m pytest html5lib/tests
+%endif
 %endif
 
 %if %{with python3}
 %py3_build
+
+%if %{with tests}
+%{__python3} -m pytest html5lib/tests
+%endif
 %endif
 
 %install
