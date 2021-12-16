@@ -18,7 +18,7 @@ Source0:	https://files.pythonhosted.org/packages/source/h/html5lib/%{module}-%{v
 URL:		https://github.com/html5lib/
 %if %{with python2}
 BuildRequires:	python-devel >= 1:2.7
-BuildRequires:	python-setuptools >= 18.5
+BuildRequires:	python-setuptools >= 1:18.5
 %if %{with tests}
 BuildRequires:	python-flake8
 BuildRequires:	python-mock
@@ -34,7 +34,7 @@ BuildRequires:	python-webencodings
 %endif
 %if %{with python3}
 BuildRequires:	python3-devel >= 1:3.3
-BuildRequires:	python3-setuptools >= 18.5
+BuildRequires:	python3-setuptools >= 1:18.5
 %if %{with tests}
 BuildRequires:	python3-flake8
 BuildRequires:	python3-pytest
