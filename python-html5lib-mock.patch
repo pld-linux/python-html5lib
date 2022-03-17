@@ -1,0 +1,14 @@
+--- html5lib-1.1/html5lib/tests/test_meta.py.orig	2020-06-23 01:23:02.000000000 +0200
++++ html5lib-1.1/html5lib/tests/test_meta.py	2022-03-17 18:11:37.943769329 +0100
+@@ -1,7 +1,10 @@
+ from __future__ import absolute_import, division, unicode_literals
+ 
+ import six
+-from mock import Mock
++try:
++    from mock import Mock
++except ImportError:
++    from unittest.mock import Mock
+ 
+ from . import support
+ 
