@@ -9,7 +9,7 @@ Summary:	HTML parser/tokenizer based on the WHATWG HTML5 specification
 Summary(pl.UTF-8):	Analizator i tokenizer HTML-a oparty na specyfikacji WHATWG HTML5
 Name:		python-%{module}
 Version:	1.1
-Release:	4
+Release:	5
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/html5lib/
